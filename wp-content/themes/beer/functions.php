@@ -111,7 +111,7 @@ function my_theme_load_resources() {
     
     // style connected
     
-    wp_register_style('my-theme-style', $theme_uri.'/assets/css/production.css', false, '1.0');
+    wp_register_style('my-theme-style', $theme_uri.'/assets/css/production_post.css', false, '1.0');
     wp_enqueue_style('my-theme-style');
 
     // scripts connected
