@@ -1,0 +1,15 @@
+@media screen and (min-width:1280px) and (max-width:1366px) {
+    
+    .menu-page-content-image {
+        display: none;
+    }
+    
+    .menu-page-content-desc {
+        width: 66%;
+    }
+    
+    .page-header>.full-height {
+        padding: 90px 0;
+    }
+    
+}

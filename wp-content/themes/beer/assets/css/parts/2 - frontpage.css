@@ -1,0 +1,170 @@
+/* slider */
+
+.front-slider {
+    margin-bottom: 40px;
+}
+
+.front-slider-desc {
+    position: relative;
+}
+
+.front-slider-desc:after {
+    content: '';
+    position: absolute;
+    height: calc(100% + 120px);
+    width: 1px;
+    background-color: #bcbcbc;
+        top: 0;
+    left: calc(50% - 1px);
+    -webkit-transform: rotate(36deg);
+    z-index: -1;
+}
+
+.front-slider .katalog-beer-title {
+    white-space: nowrap;
+    font-size: 52px;
+    color: #fafafa;
+    padding: 6px 20px;
+    background-color: #282828;
+        min-width: 120%;
+    position: relative;
+    letter-spacing: 10px;
+}
+
+.katalog-beer-image {
+    text-align: center;
+}
+
+.katalog-beer-title {
+    font-size: 26px;
+}
+
+.katalog-beer-grade {
+    font-style: italic;
+    font-size: 20px;
+}
+
+.katalog-beer-params-title {
+    color: #bcbcbc;
+    font-style: italic;
+    margin-right: 5px;
+}
+
+.beer-color {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #AD523A;
+    vertical-align: middle;
+}
+
+.front-slider-image {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.front-slider-image img {
+    width: 100%;
+}
+
+.katalog-beer-params li {
+    margin-bottom: 0;
+}
+
+.front-slider-desc {
+        padding-right: 20px;
+}
+
+/* utured block */
+
+.front-future-newest,
+.front-future-popular{
+    background: #fafafa;
+    color: #333;
+    padding: 20px;
+}
+
+.front-future-newest {
+    width: calc(50% - 40px);
+    margin-right: 40px;
+}
+
+/* front-about */
+
+.front-about {
+    margin: 150px 0;
+    color: #fafafa;
+}
+
+.front-about h2 {
+    border-bottom: 1px solid #bcbcbc;
+    padding: 20px 20px 20px 0;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+/* section block */
+
+.section-title {
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bcbcbc;
+    color: #fafafa;
+}
+
+.section-title > * {
+    font-size: 32px;
+}
+
+.section-more a {
+    font-size: 18px;
+    color: #fafafa;
+}
+
+.section-content {
+    color: #fff;
+}
+
+/* katalog */
+
+.katalog-beer {
+    background: #fafafa;
+    padding: 20px;
+    position: relative;
+}
+
+.katalog-beer-price {
+    margin-top: 20px;
+}
+
+/* front desc */
+
+.front-desc {
+    margin: 150px 0;
+}
+.katalog-beer-price-total {
+    font-family: 'Roboto Slab',serif;
+    font-size: 22px;
+}
+
+.katalog-grid > .dis-flex {
+    flex-wrap: wrap;
+}
+
+.katalog-grid .col-3-6 {
+    width: calc(50% - 20px);
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+.katalog-grid > .col-3-6:nth-of-type(2n) {
+    width: calc(50% - 20px);
+    margin-right: 0;
+}
+
+.katalog-grid > .col-3-6:nth-last-child(n),
+.katalog-grid > .col-3-6:last-child(even) {
+    margin-bottom: 0;
+}

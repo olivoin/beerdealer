@@ -1,0 +1,694 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Reddish\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-04 10:19+0300\n"
+"PO-Revision-Date: 2014-07-30 10:55+0300\n"
+"Last-Translator: BestWebSoft <info@bestwebsoft.com>\n"
+"Language-Team: \n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e;_c;_x:1,2c;_ex:1,2c;_n:1,2;__ngettext:1,2;_nx:1,2,3с\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n%10==1 && n%100!=11) ? 3 : ((n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20)) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: search.php:11
+#: no-results.php:12
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Результаты поиска для запроса: %s"
+
+#: content.php:18
+msgid "Featured post"
+msgstr "Избранная запись"
+
+#: content.php:26
+#, php-format
+msgid "Permalink to %s"
+msgstr "Постоянная ссылка на %s"
+
+#: content.php:29
+#: image.php:14
+msgid "Posted on"
+msgstr "Опубликовано"
+
+#: content.php:38
+msgid "in "
+msgid_plural "in "
+msgstr[0] "в рубрике "
+msgstr[1] "в рубриках "
+msgstr[2] "в рубриках "
+msgstr[3] "в рубриках"
+
+#: content.php:40
+msgctxt "full stop before author name"
+msgid " "
+msgstr ".  "
+
+#: content.php:42
+msgctxt "author"
+msgid " by "
+msgstr "Автор: "
+
+#: content.php:54
+#: content.php:59
+#: image.php:64
+#: content-page.php:13
+msgid "Pages:"
+msgstr "Страницы"
+
+#: content.php:58
+msgid "Continue reading <span class=\"meta-nav\">&#8230;</span>"
+msgstr "Читать далее <span class=\"meta-nav\">&#8230;</span>"
+
+#: content.php:65
+msgid "Tags: "
+msgstr "Теги: "
+
+#: content.php:69
+msgid "[Top]"
+msgstr "[Наверх]"
+
+#: content.php:70
+#: image.php:26
+#: content-page.php:16
+msgctxt "post edit link"
+msgid "Edit"
+msgstr "Редактировать"
+
+#: content.php:74
+msgid "Leave a reply"
+msgstr "Оставить комментарий"
+
+#: content.php:74
+msgid "1 Reply"
+msgstr "1 Комментарий"
+
+#: content.php:74
+msgid "% Reply"
+msgid_plural "% Replies"
+msgstr[0] "% Комментарий"
+msgstr[1] "% Комментария"
+msgstr[2] "% Комментариев"
+msgstr[3] "% Комментарий"
+
+#: footer.php:9
+msgid "Powered by WordPress and"
+msgstr "Работает на WordPress и теме "
+
+#: footer.php:9
+msgid "Theme"
+msgstr " "
+
+#: archive.php:11
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Архив за день: %s"
+
+#: archive.php:13
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Архив за месяц: %s"
+
+#: archive.php:13
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y "
+
+#: archive.php:15
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Архив за год: %s"
+
+#: archive.php:15
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:17
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Архив метки: %s"
+
+#: archive.php:19
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Архив рубрики: %s"
+
+#: archive.php:21
+#, php-format
+msgid "Author&#8217;s Archive: %s"
+msgstr "Архив автора: %s"
+
+#: archive.php:23
+msgid "Archives"
+msgstr "Архивы"
+
+#: no-results.php:10
+msgid "Page Not Found"
+msgstr "Страница не найдена"
+
+#: no-results.php:14
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#: no-results.php:18
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "К сожалению, по вашему запросу ничего не найдено. Попробуйте использовать другие ключевые слова."
+
+#: no-results.php:20
+msgid "We&rsquo;re very sorry, but the page you requested has not been found!"
+msgstr "К сожалению,  запрошенная страница не найдена."
+
+#: no-results.php:21
+msgid "You could try searching the website for the content you were looking for."
+msgstr "Вы можете попробовать найти нужную информацию с помощью поиска по сайту."
+
+#: no-results.php:23
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Похоже, мы не можем найти запрошенную информацию. Вы можете попробовать найти нужную информацию с помощью поиска по сайту."
+
+#: comments.php:18
+#, php-format
+msgid "One comment on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
+msgstr[0] "Один комментарий к &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s комментария к &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s комментариев &ldquo;%2$s&rdquo;"
+msgstr[3] "%1$s комментарий &ldquo;%2$s&rdquo;"
+
+#: comments.php:27
+msgid "Comment navigation"
+msgstr "Навигация по комментариям"
+
+#: comments.php:28
+msgid "&larr; Older Comments"
+msgstr "&larr; Предыдущие комментарии"
+
+#: comments.php:29
+msgid "Newer Comments &rarr;"
+msgstr "Следующие комментарии &rarr;"
+
+#: comments.php:34
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."
+
+#: comments.php:41
+msgid "Please give us your valuable comment"
+msgstr "Оставьте свой комментарий"
+
+#: comments.php:42
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Ответить %s"
+
+#: comments.php:43
+msgid "Cancel Reply"
+msgstr "Отменить комментарий"
+
+#: comments.php:44
+msgid "Send My Comment"
+msgstr "Отправить комментарий"
+
+#: comments.php:45
+msgctxt "noun"
+msgid "Comment"
+msgstr "Ваш комментарий"
+
+#: comments.php:46
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
+msgstr "Вы вошли как <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Выйти?</a>"
+
+#: comments.php:47
+#, php-format
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
+msgstr "Вы можете использовать следующие <abbr title=\"HyperText Markup Language\">HTML</abbr>-теги и атрибуты: %s"
+
+#: sidebar.php:6
+msgid "recent posts"
+msgstr "последние записи"
+
+#: sidebar.php:16
+msgid "recent comments"
+msgstr "последние комментарии"
+
+#: sidebar.php:21
+msgctxt "comment_on"
+msgid " on"
+msgstr "о"
+
+#: sidebar.php:26
+msgid "archives"
+msgstr "архивы"
+
+#: sidebar.php:32
+msgid "categories"
+msgstr "категории"
+
+#: single.php:10
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr;"
+
+#: single.php:11
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: image.php:17
+#, php-format
+msgid "<span class=\"color\"> %1$s </span> at <a href=\"%2$s\" title=\"Link to full-size image\">%3$s &times; %4$s</a> in <a href=\"%5$s\" title=\"Return to %6$s\" rel=\"gallery\">%7$s</a>."
+msgstr "<span class=\"color\"> %1$s </span> с разрешением <a href=\"%2$s\" title=\"Ссылка на полноразмерное изображение\">%3$s &times; %4$s</a> в галерее <a href=\"%5$s\" title=\"Вернуться к %6$s\" rel=\"gallery\">%7$s</a>."
+
+#: image.php:68
+msgid "&larr; Previous image"
+msgstr "&larr; Предыдущее изображение"
+
+#: image.php:69
+msgid "Next image &rarr;"
+msgstr "Следующее изображение &rarr;"
+
+#: functions.php:19
+msgid "Primary Navigation"
+msgstr "Основное меню"
+
+#: functions.php:20
+msgid "Secondary Navigation"
+msgstr "Дополнительное меню"
+
+#: functions.php:60
+msgid "SUBMIT"
+msgstr "ОТПРАВИТЬ"
+
+#: functions.php:62
+msgid "CLEAR"
+msgstr "ОЧИСТИТЬ"
+
+#: functions.php:63
+msgid "File is not selected"
+msgstr "Файл не выбран"
+
+#: functions.php:64
+msgid "File is selected"
+msgstr "Файл выбран"
+
+#: functions.php:65
+msgid "Choose file"
+msgstr "Выберите файл"
+
+#: functions.php:113
+msgid "Primary"
+msgstr "Основная боковая колонка"
+
+#: functions.php:114
+msgid "A short description of the sidebar."
+msgstr "Краткое описание боковой колонки"
+
+#: functions.php:135
+msgid "Pingback:"
+msgstr "Уведомление: "
+
+#: functions.php:136
+msgid "Edit"
+msgstr "Изменить"
+
+#: functions.php:149
+msgid "Post author"
+msgstr "Автор записи"
+
+#: functions.php:154
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s в %2$s"
+
+#: functions.php:157
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш комментарий ожидает проверки."
+
+#: functions.php:162
+msgctxt "comment"
+msgid "Edit"
+msgstr "Редактировать"
+
+#: functions.php:164
+msgid "Reply"
+msgstr "Ответить"
+
+#: functions.php:185
+msgid "Home"
+msgstr "Главная"
+
+#: functions.php:204
+#: functions.php:249
+msgid "Page "
+msgstr "Страница "
+
+#: functions.php:207
+#, php-format
+msgid "Category Archives:&thinsp;%s"
+msgstr "Архив рубрики:&thinsp;%s"
+
+#: functions.php:228
+#, php-format
+msgid "Tag Archives:&thinsp;%s"
+msgstr "Архив метки:&thinsp;%s"
+
+#: functions.php:230
+#: functions.php:232
+#: functions.php:234
+msgid "Archive for &thinsp;"
+msgstr "Архив за &thinsp;"
+
+#: functions.php:236
+msgid "Author&#8217;s Archive"
+msgstr "Архив автора"
+
+#: functions.php:238
+msgid "Search Results"
+msgstr "Результаты поиска"
+
+#: functions.php:240
+msgid "Page not found"
+msgstr "Страница не найдена"
+
+#: functions.php:277
+#, php-format
+msgid "Page %s"
+msgstr "Страница %s"
+
+#: functions.php:333
+msgid "Previous Page"
+msgstr "Предыдущая"
+
+#: functions.php:356
+msgid "Next Page"
+msgstr "Следующая"
+
+#: functions.php:413
+msgid " Image Slider"
+msgstr "Слайдер изображений"
+
+#: functions.php:436
+msgid "Image slider settings"
+msgstr "Настройки слайдера изображений"
+
+#: functions.php:438
+msgid "Options saved"
+msgstr "Настройки сохранены"
+
+#: functions.php:448
+msgid "Front Page"
+msgstr "Главная страница"
+
+#: functions.php:451
+msgid "Display image slider on the Front Page"
+msgstr "Отображать слайдер изображений на главной странице"
+
+#: functions.php:454
+msgid "Single Posts"
+msgstr "Записи"
+
+#: functions.php:457
+msgid "Display image slider on all single Posts"
+msgstr "Отображать слайдер изображений на страницах записей (тип Post)"
+
+#: functions.php:460
+msgid "Single Pages"
+msgstr "Страницы"
+
+#: functions.php:463
+msgid "Display image slider on all single Pages"
+msgstr "Отображать слайдер изображений на Страницах (тип Page)."
+
+#: functions.php:466
+msgid "All other types of pages"
+msgstr "Остальные страницы"
+
+#: functions.php:469
+msgid "Display image slider on all other pages (Search result page, Archives, 404 Page Not Found)"
+msgstr "Отображать слайдер изображений на всех остальных страницах (страница результатов поиска, страницы архивов, страница ошибки 404)"
+
+#: functions.php:472
+msgid "Display slider with checked and unchecked posts(pages)"
+msgstr "Отображение слайдера в зависимости от того, выбран или не выбран флажок"
+
+#: functions.php:475
+msgid "Do not display image slider with Posts and Pages for which \"Do not display Image slider with this post (page)\" checkbox is checked"
+msgstr "Не отображать слайдер изображений с  Записями и Страницами, в которых отмечен флажок \"Не отображать слайдер изображений с этой записью (страницей)\""
+
+#: functions.php:477
+msgid "Display image slider only with Posts and Pages for which \"Do not display Image slider with this post (page)\" checkbox is checked"
+msgstr "Отображать слайдер изображений только с  Записями и Страницами, в которых отмечен флажок \"Не отображать слайдер изображений с этой записью (страницей)\""
+
+#: functions.php:479
+msgid "Display image slider with all Posts and Pages(regardless of whether \"Do not display Image slider with this post (page)\" checkbox is checked)"
+msgstr "Отображать слайдер изображений со всеми Записями и Страницами независимо от того, отмечен ли флажок"
+
+#: functions.php:483
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: functions.php:501
+msgid "Image Slider"
+msgstr "Слайдер изображений"
+
+#: functions.php:523
+msgid "Display this post(page) in Image slider"
+msgstr "Отображать эту запись (страницу)  в слайдере изображений"
+
+#: functions.php:527
+msgid "Do not display Image slider with this post (page)"
+msgstr "Не отображать слайдер с этой записью(страницей)"
+
+#: functions.php:545
+msgid ""
+"You can select checkboxes below to specify where you want to display image slider.\n"
+"\tEdit Page or Edit Post pages include a checkbox \"Do not display image slider with this post (page)\" that is unchecked by default.\n"
+"\tBelow you can specify whether to display image slider depending on the state of this checkbox."
+msgstr "Ниже вы можете выбрать, на каких страницах следует отображать слайдер изображений. На каждой странице редактирования Записи(Страницы) есть флажок \"Не отображать слайдер изображений с этой записью (страницей)\", который по умолчанию не выбран. Ниже вы можете задать настройки для отображения слайдера в зависимости от того, отмечен ли этот флажок."
+
+#: functions.php:589
+msgid "Read more"
+msgstr "Читать далее"
+
+#: functions.php:593
+msgid "Featured image has not been uploaded"
+msgstr "Миниатюра для слайда не загружена"
+
+#: searchform.php:1
+#: searchform.php:3
+msgid "Search Site..."
+msgstr "Поиск по сайту..."
+
+#~ msgid "Enter search keyword"
+#~ msgstr "Введите поисковый запрос"
+
+#~ msgid "You have not uploaded the featured image"
+#~ msgstr "Миниатюра для слайда не загружена"
+
+#~ msgid "Archive for:&thinsp;"
+#~ msgstr "Архив метки:&thinsp;"
+
+#~ msgid "Archive for: %s"
+#~ msgstr "Архив за: %s"
+
+#~ msgid "Archives for: %s"
+#~ msgstr "Архив за: %s"
+
+#~ msgid "Archive for category:&thinsp; %s"
+#~ msgstr "Архив категории:&thinsp;%s"
+
+#~ msgid "Powered by WordPress and <span class=\"color\">Reddish </span>Theme"
+#~ msgstr "Работает на WordPress и теме <span class=\"color\">Reddish </span>"
+
+#~ msgid "Reddish"
+#~ msgstr "Wordpress"
+
+#~ msgid "Powered on"
+#~ msgstr "Работает на"
+
+#~ msgid " Reblog"
+#~ msgstr " Реблог"
+#~ msgctxt "post type general name"
+
+#~ msgid "Slides"
+#~ msgstr "Слайды"
+#~ msgctxt "post type singular name"
+
+#~ msgid "Slide"
+#~ msgstr "Слайд"
+#~ msgctxt "slide"
+
+#~ msgid "Add New"
+#~ msgstr "Добавить новый слайд"
+
+#~ msgid "Add New Slide"
+#~ msgstr "Добавить новый слайд"
+
+#~ msgid "Edit Slide"
+#~ msgstr "Редактировать слайд"
+
+#~ msgid "New Slide"
+#~ msgstr "Новый слайд"
+
+#~ msgid "View Slide"
+#~ msgstr "Посмотреть слайд"
+
+#~ msgid "Slide"
+#~ msgstr "Слайд"
+
+#~ msgid "Slides"
+#~ msgstr "Слайды"
+
+#~ msgid "Do not display image slider with Posts that are checked"
+#~ msgstr "Не отображать слайдер с записями, в которых отмечен флажок."
+
+#~ msgid "Display image slider only with Posts that are checked"
+#~ msgstr "Отображать слайдер с записями, в которых отмечен флажок"
+
+#~ msgid "and"
+#~ msgstr "и"
+
+#~ msgid "Technologies"
+#~ msgstr "Технологии"
+
+#~ msgid "View all posts in %s"
+#~ msgstr "Посмотреть все записи в %s"
+
+#~ msgid "Sorry, nothing found."
+#~ msgstr "К сожалению, ничего не найдено."
+
+#~ msgid "Image"
+#~ msgstr "Изображение"
+
+#~ msgid "Download high resolution image"
+#~ msgstr "Загрузить полноразмерное изображение"
+
+#~ msgid ""
+#~ "You can select checkboxes below to specify where you want to display "
+#~ "Image Slider."
+#~ msgstr ""
+#~ "Ниже вы можете выбрать, на каких страницах отображать слайдер изображений."
+#~ "На каждой странице редактирования Записи есть флажок \"Не отображать "
+#~ "слайдер с этой Записью\", который по умолчанию не выбран. Ниже вы можете "
+#~ "задать настройки для отображения слайдера в зависимости от того, выбран "
+#~ "этот флажок или нет."
+
+#~ msgid "RECENT POSTS"
+#~ msgstr "НЕДАВНИЕ ЗАПИСИ"
+
+#~ msgid "RECENT COMMENTS"
+#~ msgstr "НЕДАВНИЕ КОММЕНТАРИИ"
+
+#~ msgid "ARCHIVES"
+#~ msgstr "АРХИВЫ"
+
+#~ msgid "CATEGORIES"
+#~ msgstr "РУБРИКИ"
+
+#~ msgid "Greenfield"
+#~ msgstr "AБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧШЩЬЪЭЮЯабвгдеёжзиклмнопрстуфхцчшщьъэюя"
+#~ msgctxt "category"
+
+#~ msgid "in"
+#~ msgstr "в рубрике"
+
+#, fuzzy
+#~ msgctxt "in"
+
+#~ msgid "in"
+#~ msgstr "в рубрике"
+
+#, fuzzy
+#~ msgid "an"
+
+#~ msgid_plural "in"
+#~ msgstr[0] "и"
+#~ msgstr[1] "и"
+#~ msgstr[2] "и"
+#~ msgstr[3] "и"
+
+#~ msgid "% Replies"
+#~ msgstr "% Комментариев"
+
+#~ msgid "Tags:"
+#~ msgstr "Теги: "
+#~ msgctxt "author"
+
+#~ msgid "by "
+#~ msgstr "Автор: "
+
+#~ msgid "Author Archives: %s"
+#~ msgstr "Архив автора: %s"
+
+#~ msgid "Archive for&thinsp;&lsquo; "
+#~ msgstr "Архив метки&thinsp;&lsquo; "
+
+#~ msgid "Archive for &lsquo; "
+#~ msgstr "Архив метки &lsquo; "
+
+#, fuzzy
+#~ msgctxt "greenfield"
+
+#~ msgid "Slides"
+
+#~ msgid_plural "post type general name"
+#~ msgstr[0] "Новый слайд"
+#~ msgstr[1] "Новый слайд"
+#~ msgstr[2] "Новый слайд"
+
+#, fuzzy
+#~ msgctxt "greenfield"
+
+#~ msgid "Slide"
+
+#~ msgid_plural "post type singular name"
+#~ msgstr[0] "Новый слайд"
+#~ msgstr[1] "Новый слайд"
+#~ msgstr[2] "Новый слайд"
+
+#~ msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+#~ msgstr "Страница не найдена."
+
+#~ msgid ""
+#~ "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+#~ "searching, or one of the links below, can help."
+#~ msgstr ""
+#~ "Запрошенную информацию найти не удалось. Вы можете воспользоваться "
+#~ "поиском по сайту или перейти на указанные ниже страницы.  "
+
+#~ msgid "Overview"
+#~ msgstr "Обзор"
+
+#~ msgid "Content on left"
+#~ msgstr "Контент слева"
+
+#~ msgid "Content on right"
+#~ msgstr "Контент справа"
+
+#~ msgid "One-column, no sidebar"
+#~ msgstr "Одна колонка, без сайдбара"
+
+#~ msgid ""
+#~ "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+#~ msgstr ""
+#~ "Готовы опубликовать ваш первый пост? <a href=\"%s\">Get started here</a>."
+
+#~ msgid ""
+#~ "<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span "
+#~ "class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</"
+#~ "time></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s "
+#~ "&times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel="
+#~ "\"gallery\">%8$s</a>."
+#~ msgstr ""
+#~ "<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span "
+#~ "class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</"
+#~ "time></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s "
+#~ "&times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel="
+#~ "\"gallery\">%8$s</a>."

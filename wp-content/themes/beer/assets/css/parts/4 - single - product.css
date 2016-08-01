@@ -1,0 +1,74 @@
+.summary.entry-summary {
+    color: #bcbcbc;
+    padding: 65px 0 65px 20px;
+    position: relative;
+}
+
+.summary.entry-summary:after {
+    content: '';
+    position: absolute;
+    height: calc(100% + 120px);
+    width: 1px;
+    background-color: #bcbcbc;
+    top: 0;
+    left: calc(50% - 1px);
+    -webkit-transform: rotate(36deg);
+    z-index: -1;
+}
+
+body.single-product .katalog-page {
+    margin: 10px 0 150px 0;
+}
+
+#breadcrumbs {
+    color: #fafafa;
+    margin-bottom: 40px;
+}
+
+#breadcrumbs a {
+    color: #bcbcbc;
+}
+
+#breadcrumbs a:nth-of-type(odd) {
+    margin-right: 12px;
+}
+
+#breadcrumbs a:nth-of-type(even) {
+    margin-left: 12px;
+}
+
+#breadcrumbs a:last-child {
+    color: #fff;
+}
+
+.entry-summary .katalog-beer-title {
+    min-width: inherit;
+    white-space: normal;
+    font-size: 52px;
+    color: #fafafa;
+    padding: 6px 20px;
+    background-color: #282828;
+    position: relative;
+    letter-spacing: 10px;
+    left: -140px;
+    margin-top: 50px;
+    line-height: 60px;
+}
+
+.woocommerce-main-image img {
+    width: 100%;
+}
+
+.product-images {
+    position: relative;
+}
+
+.product-images:after {
+    content: '';
+        width: 170px;
+    height: 1px;
+    background-color: #bcbcbc;
+    position: absolute;
+    right: -190px;
+    top: 0;
+}
