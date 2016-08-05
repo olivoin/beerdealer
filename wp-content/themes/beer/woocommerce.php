@@ -3,15 +3,11 @@
     <div class="wrap hor-wrap">
         <div class="dis-flex">
             <aside class="katalog-filter col-2-6">
-                <?php echo do_shortcode('[widget id="woocommerce_price_filter-2"]'); ?>
-                <?php echo do_shortcode('[widget id="yith-woo-ajax-navigation-2"]'); ?>
-                <?php echo do_shortcode('[widget id="yith-woo-ajax-navigation-3"]'); ?>
-                <?php echo do_shortcode('[widget id="yith-woo-ajax-reset-navigation-2"]'); ?>
+                <?php dynamic_sidebar( 'shop-sidebar' ); ?>
             </aside>
-            <section class="katalog-grid col-4-6 dis-flex flex-wrap-wrap">
+            <div class="katalog-wrapper col-4-6">
                 <?php woocommerce_content(); ?>
-            </section>
-
+            </div>
         </div>
     </div>
 </section>

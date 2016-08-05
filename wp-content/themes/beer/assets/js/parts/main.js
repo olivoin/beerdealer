@@ -46,6 +46,10 @@ jQuery(document).ready(function($) {
         });
     });
     
+    // select
+    
+    $('select').selectOrDie();
+    
     
     
 });

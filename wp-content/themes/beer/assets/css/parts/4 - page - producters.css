@@ -1,0 +1,31 @@
+.producter {
+    background-color: #1c1c1c;
+    padding: 40px 40px 40px 80px;
+    color: #fafafa;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.producter-image {
+    position: absolute;
+    left: -210px;
+    top: 0;
+    background-color: #717171;
+}
+
+.producter .katalog-beer-title {
+    min-width: inherit;
+    white-space: normal;
+    font-size: 52px;
+    color: #fafafa;
+    padding: 6px 20px;
+    background-color: #282828;
+    position: relative;
+    letter-spacing: 10px;
+    left: -100px;
+    line-height: 60px;
+}
+
+.producter-desc {
+    border-right: 1px solid #383838;
+}

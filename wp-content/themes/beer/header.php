@@ -17,18 +17,10 @@
         <nav class="header-nav">
             <div class="row">
                 <div class="float-l margin-r-40">
-                    <ul>
-                        <li><a href="#">пиво</a></li>
-                        <li><a href="#">производители</a></li>
-                        <li><a href="#">новости</a></li>
-                    </ul>
+                    <?php echo do_shortcode('[widget id="nav_menu-2"]'); ?>
                 </div>
                 <div class="float-l margin-l-40">
-                    <ul>
-                        <li><a href="#">доставка и оплата</a></li>
-                        <li><a href="#">контакты</a></li>
-                        <li><a href="#">написать нам</a></li>
-                    </ul>
+                    <?php echo do_shortcode('[widget id="nav_menu-3"]'); ?>
                 </div>
             </div> 
         </nav>

@@ -1,0 +1,16 @@
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 20px
+}
+
+.thumbnails > a {
+    display: block;
+    width: 33.333%;
+    margin-right: 10px;
+}
+
+.thumbnails > a:last-child {
+    margin-right: 0;
+}

@@ -36,27 +36,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 }
 ?>
 
-<div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(array('dis-flex','flex-wrap-wrap', 'align-items-start')); ?>>
+<div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(array('dis-flex','flex-wrap-wrap', 'align-items-start', 'relative')); ?>>
 
 	<?php
 		/**
 		 * woocommerce_before_single_product_summary hook.
-		 *
+		 * @hooked woocommerce_custom_sales_price - 20
 		 * @hooked woocommerce_show_product_sale_flash - 10
 		 * @hooked woocommerce_show_product_images - 20
+         * @hooked woocommerce_custom_sales_price - 20
 		 */
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
 	<div class="summary entry-summary text-block col-2 padding-l-20">
-
+        
 		<?php
 			/**
 			 * woocommerce_single_product_summary hook.
 			 *
 			 * @hooked woocommerce_template_single_title - 5
 			 * @hooked woocommerce_template_single_rating - 10
-			 * 
+			 * @hooked woocommerce_template_single_attr - 20
 			 * @hooked woocommerce_template_single_excerpt - 20
 			 * @hooked woocommerce_template_single_add_to_cart - 30
 			 * @hooked woocommerce_template_single_meta - 40
@@ -65,7 +66,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			 */
 			do_action( 'woocommerce_single_product_summary' );
 		?>
-
 	</div><!-- .summary -->
 
 	<?php

@@ -59,34 +59,36 @@ function woocommerce_template_loop_product_thumbnail(){
     ';
 }
 
-
-	
-/**
-* WooCommerce: выводим все пользовательские свойства товара над кнопкой "Добавить в корзину" на странице отдельного товара.
-*/
-function devise_woo_all_pa(){
- 
-    global $product;
-    $attributes = $product->get_attributes();
- 
-    if ( ! $attributes ) {
-        return;
-    }
- 
-    $out = '';
- 
-    foreach ( $attributes as $attribute ) {
- 
-        $out .= $attribute['alkogol'] . ': ';
-        $out .= $attribute['value'] . '<br />';
- 
-    }
-  
-        echo $out;
- 
+// Добавляем значение сэкономленных процентов рядом с ценой у товаров
+add_filter( 'woocommerce_sale_price_html', 'woocommerce_custom_sales_price', 10, 2 );
+    function woocommerce_custom_sales_price( $price, $product ) {
+    $percentage = round( ( ( $product->regular_price - $product->sale_price ) / $product->regular_price ) * 100 );
+    return $price . sprintf( __('<div class="sale-persent">SALE -%s</div>', 'woocommerce' ), $percentage . '%' );
 }
-  
-add_action('woocommerce_single_product_summary', 'devise_woo_all_pa');
+
+// Добавляем атрибуты на единичный товар
+
+add_filter( 'woocommerce_single_product_summary', 'woocommerce_single_attr', 10, 2 );
+    function woocommerce_single_attr() {
+    $og = get_field('og');
+    $abv = get_field('abv');
+    $ibu = get_field('ibu');
+    $volume = get_field('volume');
+    $tara_count = get_field('tara_count');
+    echo '
+        <div class="attr-name">
+            Характеристики:
+        </div>
+        <ul class="product-single-attr">
+            <li><span class="katalog-beer-params-title">OG:</span> ' . $og . '</li>
+            <li><span class="katalog-beer-params-title">ABV:</span> ' . $abv . '</li>
+            <li><span class="katalog-beer-params-title">IBU:</span> ' . $ibu . '</li>
+            <li><span class="katalog-beer-params-title">Объем:</span> ' . $volume . '</li>
+            <li><span class="katalog-beer-params-title">Кол-во единиц в таре:</span> ' . $tara_count . '</li>
+        </ul>
+    ';
+}
+
 
 // custom rub
 
@@ -103,7 +105,12 @@ case 'ABC': $currency_symbol = '<img class="svg" src="http://beerdiller.com/wp-c
 return $currency_symbol;
 }   
 
-// breadcumps 
+// dynamic sidebar 
+
+register_sidebar( array(
+	'id'          => 'shop-sidebar') );
+
+// styles and scripts connected 
 
 function my_theme_load_resources() {
     

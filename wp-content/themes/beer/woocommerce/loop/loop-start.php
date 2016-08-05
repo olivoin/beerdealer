@@ -17,3 +17,4 @@
  */
 ?>
 
+<section class="katalog-grid dis-flex flex-wrap-wrap">

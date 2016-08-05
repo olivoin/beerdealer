@@ -4,7 +4,17 @@
 
 .katalog-filter {
     color: #fff;
-    padding-right: 2%;
+    padding-right: 3%;
+    border-right: 2px solid #565656;
+}
+
+.katalog-wrapper {
+    padding-left: 3%;
+}
+
+.page-title,
+.woocommerce-result-count {
+    color: #fafafa;
 }
 
 .katalog-filter a {
@@ -29,6 +39,7 @@
     font-size: 14px;
     letter-spacing: 2px;
     font-family: 'Roboto Slab', serif;
+    z-index: 1;
 }
 
 /* pagination */

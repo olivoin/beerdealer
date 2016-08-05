@@ -53,11 +53,17 @@ if ( empty( $product ) || ! $product->is_visible() ) {
             
             
         <div class="katalog-beer-grade margin-b-20">
-            <?php $subheadingvalues = get_the_terms( $product->id, 'pa_sort'); 
-            foreach ( $subheadingvalues as $subheadingvalue ) { 
-            echo $subheadingvalue->name; } ?>
+            <?php
+               $terms = get_the_terms( $post->ID, 'pa_sort' );
+               if ( $terms && ! is_wp_error( $terms ) ) { 
+                  foreach ( $terms as $term ) {
+                     echo " $term->name ";
+                  }
+               } 
+               else {echo " ";}
+            ?>
         </div>
-
+            
         <?php 
         /**
          * woocommerce_after_shop_loop_item_title hook.
@@ -72,37 +78,18 @@ if ( empty( $product ) || ! $product->is_visible() ) {
          * @hooked woocommerce_template_loop_product_link_close - 5
          * @hooked woocommerce_template_loop_add_to_cart - 10
          */
+    
+            
         do_action( 'woocommerce_after_shop_loop_item' );
         ?>
             
             
             <ul>
-                <li><span class="katalog-beer-params-title">производитель:</span>
-                    <?php $subheadingvalues = get_the_terms( $product->id, 'pa_proizvoditel'); 
-                    foreach ( $subheadingvalues as $subheadingvalue ) { 
-                    echo $subheadingvalue->name; } ?>
-                </li>
-                <li><span class="katalog-beer-params-title">плотность:</span>
-                    <?php $subheadingvalues = get_the_terms( $product->id, 'pa_plotnost'); 
-                    foreach ( $subheadingvalues as $subheadingvalue ) { 
-                    echo $subheadingvalue->name; } ?>
-                </li>
-                <li><span class="katalog-beer-params-title">алкоголь:</span>
-                    <?php $subheadingvalues = get_the_terms( $product->id, 'pa_alkogol'); 
-                    foreach ( $subheadingvalues as $subheadingvalue ) { 
-                    echo $subheadingvalue->name; } ?>
-                </li>
-                <li><span class="katalog-beer-params-title">IBU:</span>
-                    <?php $subheadingvalues = get_the_terms( $product->id, 'pa_alkogol'); 
-                    foreach ( $subheadingvalues as $subheadingvalue ) { 
-                    echo $subheadingvalue->name; } ?>
-                </li>
-                <li><span class="katalog-beer-params-title">упаковка:</span>
-                    <?php $subheadingvalues = get_the_terms( $product->id, 'pa_upakovka'); 
-                    foreach ( $subheadingvalues as $subheadingvalue ) { 
-                    echo $subheadingvalue->name; } ?>
-                </li>
-                <li><span class="katalog-beer-params-title">цвет:</span> <div class="beer-color"></div></li>
+                <li><span class="katalog-beer-params-title">OG:</span> <?php the_field('og'); ?></li>
+                <li><span class="katalog-beer-params-title">ABV:</span> <?php the_field('abv'); ?></li>
+                <li><span class="katalog-beer-params-title">IBU:</span> <?php the_field('ibu'); ?></li>
+                <li><span class="katalog-beer-params-title">Объем:</span> <?php the_field('volume'); ?></li>
+                <li><span class="katalog-beer-params-title">Кол-во единиц в таре:</span> <?php the_field('tara_count'); ?></li>
             </ul>
             
         </div>
