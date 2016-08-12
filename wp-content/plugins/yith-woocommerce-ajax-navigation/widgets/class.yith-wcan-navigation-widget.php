@@ -137,7 +137,7 @@ if ( ! class_exists( 'YITH_WCAN_Navigation_Widget' ) ) {
                     echo "</ul>";
                 }
                 elseif ( $display_type == 'select' ) {
-                    $dropdown_label = __( 'Filters:', 'yith-woocommerce-ajax-navigation' );
+                    $dropdown_label = __( 'Выбрать параметр:', 'yith-woocommerce-ajax-navigation' );
                     ?>
 
                     <a class="yit-wcan-select-open" href="#"><?php echo apply_filters( 'yith_wcan_dropdown_default_label', $dropdown_label ) ?></a>
@@ -859,7 +859,8 @@ if ( ! class_exists( 'YITH_WCAN_Navigation_Widget' ) ) {
 
         public function get_list_html( $terms, $taxonomy, $query_type, $display_type, $instance, $terms_type_list, $current_term, $args, $is_child_class, $is_parent_class, $is_chosen_class, $level = 0, $filter_term_field = 'slug' ){
             $_chosen_attributes = YITH_WCAN()->get_layered_nav_chosen_attributes();
-            $in_array_function = apply_filters( 'yith_wcan_in_array_ignor_case', false ) ? 'yit_in_array_ignore_case' : 'in_array';
+            $in_array_function  = apply_filters( 'yith_wcan_in_array_ignor_case', false ) ? 'yit_in_array_ignore_case' : 'in_array';
+            $terms              = apply_filters( 'yith_wcan_get_list_html_terms', $terms, $taxonomy, $instance );
             foreach ( $terms as $parent_id => $term_ids ) {
                 $term = get_term_by( 'id', $parent_id, $taxonomy );
 

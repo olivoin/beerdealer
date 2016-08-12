@@ -3,12 +3,11 @@
     <div class="wrap hor-wrap">
         <div class="dis-flex">
             <aside class="katalog-filter col-2-6">
-                default page
+                
             </aside>
-            <section class="katalog-grid col-4-6 dis-flex flex-wrap-wrap">
-                пизда
+            <section class="col-4-6">
+                <?php the_content(); ?>
             </section>
-
         </div>
     </div>
 </section>

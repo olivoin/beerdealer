@@ -6,7 +6,10 @@
 
 .yith-wcan-loading {
     background: url('../images/ajax-loader.gif') no-repeat center;
-    height: 100px;
+    width: 95px;
+    height: 95px;
+    background-size: contain;
+    margin: 75px auto;
 }
 
 .woocommerce .widget_layered_nav ul.yith-wcan li span,

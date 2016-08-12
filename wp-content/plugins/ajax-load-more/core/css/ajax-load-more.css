@@ -236,7 +236,14 @@ button.alm-load-more-btn{
 	margin: 0;
 	padding: 0;
 }
-	
+	.alm-listing li{
+		background: none;
+		margin: 0 0 30px;
+		padding: 0 0 0 170px;
+		overflow: hidden;
+		position: relative;
+		list-style: none;
+	}	
 	.alm-listing li.no-img{ 
    	padding: 0; 
    }		

@@ -17,4 +17,5 @@
  */
 ?>
 
-<section class="katalog-grid dis-flex flex-wrap-wrap">
+<section class="katalog-grid dis-flex flex-wrap-wrap products">
+    

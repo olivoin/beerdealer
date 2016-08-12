@@ -26,9 +26,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<table class="shop_table">
 		<thead>
 			<tr>
-				<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-				<th class="product-quantity"><?php _e( 'Qty', 'woocommerce' ); ?></th>
-				<th class="product-total"><?php _e( 'Totals', 'woocommerce' ); ?></th>
+				<th class="product-name"><h4><?php _e( 'Product', 'woocommerce' ); ?></h4></th>
+				<th class="product-quantity"><h4><h4><?php _e( 'Qty', 'woocommerce' ); ?></h4></th>
+				<th class="product-total"><h4><?php _e( 'Totals', 'woocommerce' ); ?></h4></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -41,13 +41,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 					?>
 					<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_order_item_class', 'order_item', $item, $order ) ); ?>">
 						<td class="product-name">
-							<?php
+							<h4><?php
 								echo apply_filters( 'woocommerce_order_item_name', esc_html( $item['name'] ), $item, false );
 
 								do_action( 'woocommerce_order_item_meta_start', $item_id, $item, $order );
 								$order->display_item_meta( $item );
 								do_action( 'woocommerce_order_item_meta_end', $item_id, $item, $order );
-							?>
+							?></h4>
 						</td>
 						<td class="product-quantity"><?php echo apply_filters( 'woocommerce_order_item_quantity_html', ' <strong class="product-quantity">' . sprintf( '&times; %s', esc_html( $item['qty'] ) ) . '</strong>', $item ); ?></td>
 						<td class="product-subtotal"><?php echo $order->get_formatted_line_subtotal( $item ); ?></td>
@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php foreach ( $totals as $total ) : ?>
 					<tr>
 						<th scope="row" colspan="2"><?php echo $total['label']; ?></th>
-						<td class="product-total"><?php echo $total['value']; ?></td>
+						<td class="product-total"><h4><?php echo $total['value']; ?></h4></td>
 					</tr>
 				<?php endforeach; ?>
 			<?php endif; ?>

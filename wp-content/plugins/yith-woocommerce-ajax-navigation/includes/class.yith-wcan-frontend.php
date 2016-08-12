@@ -50,7 +50,7 @@ if ( ! class_exists( 'YITH_WCAN_Frontend' ) ) {
                 ) 
             );
             
-            if( in_array( strtolower( wp_get_theme()->name ), $theme_support ) ){
+            if( in_array( strtolower( wp_get_theme()->name ), $theme_support ) || class_exists( 'QTX_Translator' ) ){
                 add_filter( 'yith_wcan_use_wp_the_query_object', '__return_true' );
             }
 
@@ -158,6 +158,17 @@ if ( ! class_exists( 'YITH_WCAN_Frontend' ) ) {
                         'wc_query'               => 'get_products_in_view'
                     )
                 );
+
+                $hide_out_of_stock_items = apply_filters( 'yith_wcan_hide_out_of_stock_items', 'yes' == get_option( 'woocommerce_hide_out_of_stock_items' ) ? true : false );
+
+                if( $hide_out_of_stock_items ){
+                    $unfiltered_args['meta_query'][] = array(
+                        'key' => '_stock_status',
+                        'value' => 'instock',
+                        'compare' => 'AND'
+                    );
+                }
+
                 $this->unfiltered_product_ids = get_posts( $unfiltered_args );
                 $this->filtered_product_ids   = $queried_post_ids;
 

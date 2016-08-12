@@ -41,7 +41,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php
 		/**
 		 * woocommerce_before_single_product_summary hook.
-		 * @hooked woocommerce_custom_sales_price - 20
 		 * @hooked woocommerce_show_product_sale_flash - 10
 		 * @hooked woocommerce_show_product_images - 20
          * @hooked woocommerce_custom_sales_price - 20
@@ -82,7 +81,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
 
 </div><!-- #product-<?php the_ID(); ?> -->
-<div class="katalog-grid">
+<div class="katalog-single-popular katalog-grid">
     <div class="section-title dis-flex justify-content-between align-items-center">
         <h2>Популярное</h2>
     </div>                 

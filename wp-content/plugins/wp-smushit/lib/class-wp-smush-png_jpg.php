@@ -157,14 +157,14 @@ if ( ! class_exists( 'WpSmushPngtoJpg' ) ) {
 		 * @return bool True/False Can be converted or not
 		 *
 		 */
-		function can_be_converted( $id = '', $size = 'full' ) {
+		function can_be_converted( $id = '', $size = 'full', $mime = '' ) {
 
 			if ( empty( $id ) ) {
 				return false;
 			}
 
 			//False if not a PNG
-			$mime = get_post_mime_type( $id );
+			$mime = empty( $mime ) ? get_post_mime_type( $id ) : $mime;
 			if ( 'image/png' != $mime ) {
 				return false;
 			}
@@ -459,7 +459,7 @@ if ( ! class_exists( 'WpSmushPngtoJpg' ) ) {
 					foreach ( $meta['sizes'] as $size_k => $data ) {
 
 						/** Whether to convert to jpg or not **/
-						$should_convert = $this->can_be_converted( $id, $size_k );
+						$should_convert = $this->can_be_converted( $id, $size_k, 'image/png' );
 
 						//Perform the conversion
 						if ( ! $should_convert = apply_filters( 'wp_smush_convert_to_jpg', $should_convert, $id, $file, $size_k ) ) {
@@ -474,13 +474,8 @@ if ( ! class_exists( 'WpSmushPngtoJpg' ) ) {
 						} else {
 							$result = $this->convert_tpng_to_jpg( $id, $s_file, $result['meta'], $size_k );
 						}
-
-						//If there are savings
-						if ( ! empty( $result['savings'] ) ) {
-							//Add all the stats
-							array_walk_recursive( $result['savings'], function ( $item, $key ) use ( &$savings, $size_k ) {
-								$savings[ $size_k ][ $key ] = isset( $savings[ $size_k ][ $key ] ) ? $item + $savings[ $size_k ][ $key ] : $item;
-							} );
+						if( !empty( $result['savings'] ) ) {
+							$savings[ $size_k ] = $result['savings'];
 						}
 					}
 				}

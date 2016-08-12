@@ -2,14 +2,12 @@
     margin: 150px 0;
 }
 
-.katalog-filter {
-    color: #fff;
-    padding-right: 3%;
-    border-right: 2px solid #565656;
+.products {
+    margin-top: 40px;
 }
 
 .katalog-wrapper {
-    padding-left: 3%;
+   padding-left: 40px;
 }
 
 .page-title,
@@ -56,4 +54,20 @@
 
 .page-numbers li a {
     color: #fafafa;
+}
+
+/* price */
+
+.price {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.price del span {
+    color: #989898;
+}
+
+.woocommerce-Price-amount {
+    font-family: "MyriadPro-Bold";
+    font-size: 18px;
 }

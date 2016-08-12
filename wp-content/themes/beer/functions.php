@@ -3,10 +3,9 @@ function new_excerpt_length($length) {
 	return 50;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
-/* jчищаем wp_head(); */
 function remove_recent_comments_style() {  
-  global $wp_widget_factory;  
-  remove_action( 'wp_head', array( $wp_widget_factory->
+global $wp_widget_factory;  
+remove_action( 'wp_head', array( $wp_widget_factory->
 widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );  
 }  
 add_action( 'widgets_init', 'remove_recent_comments_style' );  
@@ -50,21 +49,23 @@ function woocommerce_template_loop_product_thumbnail(){
     $product_link = get_the_permalink();
     $product_img = get_the_post_thumbnail();
     echo '
-    
         <div class="col-2 padding-r-10">
             <a href="' . $product_link . '"> ' . $product_img . ' </a>
-        </div>
-    
-          
+        </div>   
     ';
 }
 
 // Добавляем значение сэкономленных процентов рядом с ценой у товаров
-add_filter( 'woocommerce_sale_price_html', 'woocommerce_custom_sales_price', 10, 2 );
-    function woocommerce_custom_sales_price( $price, $product ) {
-    $percentage = round( ( ( $product->regular_price - $product->sale_price ) / $product->regular_price ) * 100 );
-    return $price . sprintf( __('<div class="sale-persent">SALE -%s</div>', 'woocommerce' ), $percentage . '%' );
-}
+function filter_woocommerce_sale_flash( $span_class_onsale____sale_woocommerce_span, $post, $product ) { 
+  $id = $product->id;
+  $price = get_post_meta($id,'_price', true);
+  $price_r = get_post_meta($id,'_regular_price', true);
+  
+    $percentage = round( ( ( $price_r - $price ) / $price_r ) * 100 );
+    return '<span class="onsale">SALE -'.$percentage.'%</span>';
+}; 
+add_filter( 'woocommerce_sale_flash', 'filter_woocommerce_sale_flash', 10, 3 );
+
 
 // Добавляем атрибуты на единичный товар
 
@@ -76,9 +77,6 @@ add_filter( 'woocommerce_single_product_summary', 'woocommerce_single_attr', 10,
     $volume = get_field('volume');
     $tara_count = get_field('tara_count');
     echo '
-        <div class="attr-name">
-            Характеристики:
-        </div>
         <ul class="product-single-attr">
             <li><span class="katalog-beer-params-title">OG:</span> ' . $og . '</li>
             <li><span class="katalog-beer-params-title">ABV:</span> ' . $abv . '</li>
@@ -87,7 +85,9 @@ add_filter( 'woocommerce_single_product_summary', 'woocommerce_single_attr', 10,
             <li><span class="katalog-beer-params-title">Кол-во единиц в таре:</span> ' . $tara_count . '</li>
         </ul>
     ';
+    
 }
+
 
 
 // custom rub
@@ -104,6 +104,29 @@ case 'ABC': $currency_symbol = '<img class="svg" src="http://beerdiller.com/wp-c
 }
 return $currency_symbol;
 }   
+
+// управление полями оплаты
+
+ 
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+  
+function custom_override_checkout_fields( $fields ) {
+    //unset($fields['billing']['billing_first_name']);
+    //unset($fields['billing']['billing_company']);
+    unset($fields['billing']['billing_address_1']);
+    unset($fields['billing']['billing_address_2']);
+    unset($fields['billing']['billing_city']);
+    unset($fields['billing']['billing_postcode']);
+    unset($fields['billing']['billing_country']);
+    unset($fields['billing']['billing_state']);
+    //unset($fields['billing']['billing_phone']);
+    unset($fields['order']['order_comments']);
+    //unset($fields['billing']['billing_email']);
+    unset($fields['account']['account_username']);
+    unset($fields['account']['account_password']);
+    unset($fields['account']['account_password-2']);
+    return $fields;
+}
 
 // dynamic sidebar 
 

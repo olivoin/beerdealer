@@ -14,6 +14,13 @@
         <div class="header-logo">
             <a href="/"><img src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg"></a>
         </div>
+        <div class="header-cart">
+            <?php global $woocommerce; ?>
+            <a class="cart-contents" href="/cart" title="Посмотреть Вашу корзину">
+                <div class="cart-count"><?php echo sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'woothemes'),$woocommerce->cart->cart_contents_count);?></div>
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/cart.svg">
+            </a>  
+        </div>
         <nav class="header-nav">
             <div class="row">
                 <div class="float-l margin-r-40">

@@ -14,3 +14,30 @@
 .thumbnails > a:last-child {
     margin-right: 0;
 }
+
+.woocommerce-message {
+    padding: 20px;
+    background: #fafafa;
+    margin-bottom: 40px;
+    color: #121212;
+}
+
+.katalog-single-popular {
+    margin-top: 150px;
+}
+
+.katalog-single-popular .katalog-beer {
+    margin-bottom: 40px;
+}
+
+body.single-product product_title {
+    margin-top: 0px;
+}
+
+.summary.entry-summary .sale-persent {
+    position: relative;
+}
+
+.summary.entry-summary form.cart {
+    margin: 40px 0 40px 0;
+}

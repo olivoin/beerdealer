@@ -4,7 +4,18 @@
     position: relative;
 }
 
-.product-single-attr li {
+.product-single-attr,
+.custom-attributes{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.product-single-attr {
+    margin-right: 40px;
+}
+
+.product-single-attr li,
+.custom-attributes {
     color: #fafafa;
     margin-bottom: 10px;
 }
@@ -64,7 +75,7 @@ body.single-product .katalog-page {
     position: relative;
     letter-spacing: 10px;
     left: -140px;
-    margin-top: 50px;
+    margin-top: 0px;
     line-height: 60px;
 }
 
@@ -97,4 +108,12 @@ body.single-product .katalog-page {
     z-index: 1;
     font-family: 'Roboto Slab',serif;
     color: #fafafa;
+}
+
+.summary.entry-summary form.cart {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-self: center;
+    align-items: center;
 }

@@ -41,7 +41,8 @@
 
 .katalog-beer-grade {
     font-style: italic;
-    font-size: 20px;
+    font-size: 18px;
+    color: #989898;
 }
 
 .katalog-beer-params-title {
@@ -100,9 +101,21 @@
 
 .front-about h2 {
     border-bottom: 1px solid #bcbcbc;
+    border-right: 1px solid #bcbcbc;
     padding: 20px 20px 20px 0;
     font-size: 45px;
     text-transform: uppercase;
+}
+
+.front-about-desc {
+    padding: 20px;
+    font-size: 20px;
+    border-bottom: 1px solid #bcbcbc;
+    font-family: 'Roboto Slab',serif;
+}
+
+.front-about .padding-20 {
+    border-left: 1px solid #ccc;
 }
 
 /* section block */
@@ -168,3 +181,8 @@
 .katalog-grid > .col-3-6:last-child(even) {
     margin-bottom: 0;
 }
+
+.katalog-grid .katalog-beer-params-title {
+    color: #949494;
+}
+

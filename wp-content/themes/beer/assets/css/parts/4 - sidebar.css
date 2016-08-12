@@ -1,3 +1,57 @@
-.yith-wcan-select-wrapper ul.yith-wcan-select.yith-wcan li a, .widget .yit-wcan-select-open {
-    display: inline-block;
+.katalog-filter {
+    padding-right: 40px;
+    color: #fafafa;
+    border-right: 2px solid #565656;
+}
+
+.katalog-filter-title {
+    text-align: right;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #565656;
+    padding-right: 40px;
+}
+
+.yith-woocommerce-ajax-product-filter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+.widgettitle {
+    margin-right: 20px;
+    font-size: 16px;
+    font-family: 'MyriadPro-Regular';
+    text-transform: lowercase;
+}
+
+.yit-wcan-select-open.active {
+    border-bottom: 1px solid #121212;
+    position: relative;
+    z-index: 2;
+}
+
+.yith-wcan-select-wrapper {
+    background: #121212;
+    position: absolute;
+    top: 68px;
+}
+
+.yith-wcan-select-wrapper ul.yith-wcan-select.yith-wcan li:hover,
+.woocommerce-page .widget_layered_nav .yith-wcan-select-wrapper ul li.chosen  {
+    box-shadow: 0 0 0 #121212;
+    border: none;
+}
+
+.yith-wcan-select-wrapper ul.yith-wcan-select.yith-wcan li:hover a {
+    color: #fafafa;
+}
+
+.yith-wcan-select-wrapper ul.yith-wcan-select.yith-wcan li {
+    border: none;
+}
+
+.woocommerce-page .widget_layered_nav .yith-wcan-select-wrapper ul li.chosen a {
+    display: block;
 }

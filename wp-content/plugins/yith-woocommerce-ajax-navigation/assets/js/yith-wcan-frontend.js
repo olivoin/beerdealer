@@ -145,12 +145,7 @@ jQuery(function ($) {
 
             t.parents('div.yith-woo-ajax-navigation').find('a.yit-wcan-select-open').removeClass('active');
 
-            t.parent().find('div.yith-wcan-select-wrapper').css('z-index', '-1').animate({
-
-                visibility: "hidden",
-                opacity   : 0
-
-            }, 300);
+            t.parent().find('div.yith-wcan-select-wrapper').show();
         }
 
         //loading

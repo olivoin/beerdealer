@@ -28,15 +28,15 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 
-<table class="shop_table shop_table_responsive cart" cellspacing="0">
+<table class="shop_table shop_table_responsive cart" cellspacing="0" width="100%">
 	<thead>
 		<tr>
-			<th class="product-remove">&nbsp;</th>
-			<th class="product-thumbnail">&nbsp;</th>
-			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-			<th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
-			<th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
-			<th class="product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></th>
+			<th class="product-remove"><h4>Удалить товар</h4></th>
+			<th class="product-thumbnail"><h4>Фото</h4></th>
+			<th class="product-name"><h4><?php _e( 'Product', 'woocommerce' ); ?></h4></th>
+			<th class="product-price"><h4><?php _e( 'Price', 'woocommerce' ); ?></h4></th>
+			<th class="product-quantity"><h4><?php _e( 'Quantity', 'woocommerce' ); ?></h4></th>
+			<th class="product-subtotal"><h4><?php _e( 'Total', 'woocommerce' ); ?></h4></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -81,7 +81,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 							if ( ! $product_permalink ) {
 								echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ) . '&nbsp;';
 							} else {
-								echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_title() ), $cart_item, $cart_item_key );
+								echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<span class="katalog-beer-params-title">Наименование</span> <a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_title() ), $cart_item, $cart_item_key );
 							}
 
 							// Meta data
@@ -141,7 +141,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 					</div>
 				<?php } ?>
 
-				<input type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'woocommerce' ); ?>" />
+				<input  class="update_cart_button" type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'woocommerce' ); ?>" />
 
 				<?php do_action( 'woocommerce_cart_actions' ); ?>
 
