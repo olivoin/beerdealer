@@ -6,10 +6,21 @@
 
 .katalog-filter-title {
     text-align: right;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding-bottom: 28px;
+    margin-bottom: 28px;
     border-bottom: 2px solid #565656;
     padding-right: 40px;
+    font-family: 'Roboto Slab',serif;
+    font-size: 1.5em;
+    position: relative;
+    right: 0px;
+    width: calc(100% + 40px);
+    top: 5px;
+    display: none;
+}
+
+body.post-type-archive .katalog-filter-title{
+    display: block;
 }
 
 .yith-woocommerce-ajax-product-filter {
@@ -54,4 +65,8 @@
 
 .woocommerce-page .widget_layered_nav .yith-wcan-select-wrapper ul li.chosen a {
     display: block;
+}
+
+.yith-wcan-reset-navigation {
+    margin-top: 40px;
 }

@@ -1,7 +1,7 @@
 <footer id="footer">
     <div class="wrap hor-wrap dis-flex">
         <div class="col-1-6">
-            <img src="http://beerdiller.com/wp-content/themes/beer/assets/images/logo.svg">
+            <a href="/"><img src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg"></a>
         </div>
         <div class="col-5-6">
             <div class="dis-flex justify-content-between full-height align-items-end">

@@ -9,10 +9,14 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<header id="header">
+<header id="header" class="wow hide fadeIn">
     <div class="wrap hor-wrap">
         <div class="header-logo">
             <a href="/"><img src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg"></a>
+            <div class="margin-l-20">
+                <div class="margin-b-10"><a href="">8 800 345 23 23</a></div>
+                <div class="margin-b-10"><a href="">shop@beerdealer.ru</a></div>
+            </div>
         </div>
         <div class="header-cart">
             <?php global $woocommerce; ?>

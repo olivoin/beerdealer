@@ -50,6 +50,30 @@ module.exports = function(grunt) {
             }
           },
         
+        tinypng: {
+            options: {
+                apiKey: "AnWeKagK92G8sl-L9OBJyiu0Qp5zIXBV",
+                checkSigs: true,
+                sigFile: 'assets/images/file_sigs.json',
+                summarize: true,
+                showProgress: true,
+                stopOnImageError: true,
+            },
+            /*compress: {
+                src: ['*.png', '*.jpg'],
+                cwd: 'assets/images/',
+                dest: 'assets/images/',
+                expand: true
+            },*/
+            compress2: {
+                src: ['**/*.{png,jpg,jpeg}'],
+                cwd: '../../uploads/',
+                dest: '../../uploads/',
+                expand: true,
+            },
+            
+          },
+        
         watch: {
             scripts: {
                 files: [
@@ -76,10 +100,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-tinypng');
     grunt.loadNpmTasks('grunt-contrib-watch');
     
     // 4. Указываем, какие задачи выполняются, когда мы вводим «grunt» в терминале
-    grunt.registerTask('default', ['concat', 'uglify' , 'cssmin', 'autoprefixer', 'watch']);
+    grunt.registerTask('default', ['concat', 'uglify' , 'cssmin', 'autoprefixer', 'tinypng', 'watch']);
 
     
 };

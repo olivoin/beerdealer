@@ -1,11 +1,8 @@
 <?php get_header(); /* Template Name: Страница Каталог */ ?>
-<section class="katalog-page">
+<section class="producters-page">
     <div class="wrap hor-wrap">
-        <div class="dis-flex">
-            <aside class="katalog-filter col-2-6">
-                
-            </aside>
-            <section class="col-4-6">
+        <div class="dis-flex flex-wrap-wrap justify-content-end">
+            <section class="col-4-6 wiw hide fadeIn">
                 <?php the_content(); ?>
             </section>
         </div>

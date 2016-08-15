@@ -2,6 +2,25 @@
 
 jQuery(document).ready(function($) {
     
+    setTimeout(function(){
+        wow = new WOW(
+            {
+                boxClass:     'wow',      // default
+                animateClass: 'animated', // default
+                offset:       150,          // default 
+                mobile:       true,       // default
+                live:         true        // default
+            }
+        )
+        wow.init();
+    }, 500);
+    
+    setTimeout(function(){
+        $('#header a, .katalog-beer a, #footer a').click(function() {
+            $('.hide').animate({'opacity':'0'}, 300);
+        });
+    }, 500);
+    
     $(function(){
     jQuery('img.svg').each(function(){
         var $img = jQuery(this);

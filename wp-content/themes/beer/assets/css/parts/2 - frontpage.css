@@ -31,6 +31,10 @@
     letter-spacing: 10px;
 }
 
+.front-slider .katalog-beed-desc {
+    color: #fafafa;
+}
+
 .katalog-beer-image {
     text-align: center;
 }
@@ -85,11 +89,19 @@
     background: #fafafa;
     color: #333;
     padding: 20px;
+    position: relative;
 }
 
 .front-future-newest {
     width: calc(50% - 40px);
     margin-right: 40px;
+}
+
+.front-future-popular .katalog-beer-price {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 22px;
 }
 
 /* front-about */
@@ -136,6 +148,12 @@
     color: #fafafa;
 }
 
+.section-more .svg {
+    fill: #fafafa;
+    width: 12px;
+    height: 10px; 
+}
+
 .section-content {
     color: #fff;
 }
@@ -150,6 +168,11 @@
 
 .katalog-beer-price {
     margin-top: 20px;
+}
+
+.katalog-beer-price {
+    font-family: 'MyriadPro-Bold';
+    font-size: 18px;
 }
 
 /* front desc */

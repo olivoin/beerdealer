@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( $order ) : ?>
-
+<div class="text-block">
 	<?php if ( $order->has_status( 'failed' ) ) : ?>
 
 		<p class="woocommerce-thankyou-order-failed"><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again.', 'woocommerce' ); ?></p>
@@ -34,7 +34,7 @@ if ( $order ) : ?>
 		</p>
 
 	<?php else : ?>
-
+    <!-- thank you, dateils text -->
 		<p class="woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
 
 		<ul class="woocommerce-thankyou-order-details order_details">
@@ -60,12 +60,16 @@ if ( $order ) : ?>
 		<div class="clear"></div>
 
 	<?php endif; ?>
+    
+    <!-- what is it? -->
+    test
+    <?php do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
+    <?php do_action( 'woocommerce_thankyou', $order->id ); ?>
 
-	<?php do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
-	<?php do_action( 'woocommerce_thankyou', $order->id ); ?>
 
 <?php else : ?>
-
+    <!-- what is it? -->
+    test 2
 	<p class="woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), null ); ?></p>
-
+</div>
 <?php endif; ?>

@@ -27,7 +27,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div <?php post_class(array('katalog-beer', 'col-3-6')); ?>>
+<div <?php post_class(array('katalog-beer', 'col-3-6','hide','wow','fadeIn')); ?>>
     <div class="dis-flex flex-wrap-wrap">
         <?php 
         /**
@@ -51,7 +51,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
             
         ?>
             
-            
+             
         <div class="katalog-beer-grade margin-b-20">
             <?php
                $terms = get_the_terms( $post->ID, 'pa_sort' );

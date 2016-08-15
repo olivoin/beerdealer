@@ -139,11 +139,20 @@ ins {
     margin-bottom: 0;
 }
 
-.text-block p,
-.text-block .katalog-beed-desc {
+.text-block p {
     margin-bottom: 20px;
     line-height: 1.6;
     font-size: 16px;
+    color: #c3c3c3;
+}
+
+.text-block strong {
+    font-weight: 100;
+    color: #fafafa;
+}
+
+.katalog-beed-desc p {
+    color: #121212;
 }
 
 .text-block p:last-child {
@@ -151,7 +160,7 @@ ins {
 }
 
 .text-block a:not(.button) {
-    color: #FAB515;
+    color: #fafafa;
     border-bottom: 1px dotted #FAB515;
 }
 
@@ -361,6 +370,14 @@ input[type="submit"]:disabled {
     margin-right: 40px;
 }
 
+.hide {
+    opacity: 0;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
 /* header  */
 
 #header {
@@ -397,7 +414,9 @@ input[type="submit"]:disabled {
     margin-bottom: 15px;
 }
 
-.header-nav li:hover a {
+.header-nav li:hover a,
+.header-nav li.current_page_item a,
+.header-nav li.current_menu_item a{
     color: #fff;
 }
 

@@ -100,7 +100,7 @@ return $currencies;
 add_filter('woocommerce_currency_symbol', 'add_my_currency_symbol', 10, 2);
 function add_my_currency_symbol( $currency_symbol, $currency ) {
 switch( $currency ) {
-case 'ABC': $currency_symbol = '<img class="svg" src="http://beerdiller.com/wp-content/themes/beer/assets/images/rub.svg"style="width:11.4px;">'; break;
+case 'ABC': $currency_symbol = '&nbsp;руб'; break;
 }
 return $currency_symbol;
 }   
